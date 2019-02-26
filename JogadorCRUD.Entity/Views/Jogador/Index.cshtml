@@ -1,0 +1,63 @@
+﻿@model IEnumerable<JogadorCRUD.Entity.Models.Jogador>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Jogadores</h2>
+
+<p>
+    @Html.ActionLink("Adicionar Novo Jogador", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nascimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cpf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Posicao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nascimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Endereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cpf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Posicao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Time)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdJogador }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.IdJogador }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.IdJogador })
+        </td>
+    </tr>
+}
+
+</table>
