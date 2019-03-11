@@ -1,2 +1,2 @@
-# PJCadastroJogador
-Projeto CRUD, utilizando a arquitetura MVC com Asp.Net
+### PJCadastroJogador
+**Projeto CRUD, utilizando a arquitetura MVC com Asp.Net**
